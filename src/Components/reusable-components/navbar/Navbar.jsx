@@ -1,47 +1,72 @@
-import React from "react";
-import logo from "../../../pawworld.png";
-import userpic from "../../../user-profile.png";
-
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 function NavBar() {
     return (
-        <div className='nav-bar'>
-            <ul className='nav justify-content-end'>
-                <li className='nav-item position-absolute top-0 start-0 '>
-                    <img src={logo} height={100} width={120} alt='Logo' />
-                </li>
-                <li className='nav-item p-4'>
-                    <a className='nav-link nav-color' href='#'>
-                        <b>Register Pet</b>
-                    </a>
-                </li>
-                <li className='nav-item dropdown p-4'>
-                    <a
-                        className='nav-link nav-color dropdown-toggle '
-                        data-bs-toggle='dropdown'
-                        href='#'
-                        role='button'
-                        aria-expanded='false'>
-                        <b>Appointments</b>
-                    </a>
-                    <ul className='dropdown-menu p-4'>
-                        <li>
-                            <a className='nav-color dropdown-item p-4' href='#'>
-                                <b>Book Appointment</b>
-                            </a>
-                        </li>
-                        <li>
-                            <a className='nav-color dropdown-item p-4' href='#'>
-                                <b>View Appointment</b>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li className='nav-item p-4'>
-                    <img src={userpic} height={40} width={50} alt='User' />
-                </li>
-            </ul>
-        </div>
+        <Navbar expand='lg' style={{ backgroundColor: '#7ec6e8' }}>
+            <Container fluid>
+                <Navbar.Brand as={Link} to='/'>
+                    <img
+                        id='logo'
+                        style={{ paddingLeft: '20px', marginRight: '10px' }}
+                        src={
+                            process.env.PUBLIC_URL +
+                            '/images/logo/pawworldLogo.png'
+                        }
+                        height={100}
+                        width={150}
+                        alt='Logo'
+                    />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls='navbarScroll' />
+                <Navbar.Collapse id='navbarScroll'>
+                    <Nav
+                        className='me-auto my-2 my-lg-0'
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll>
+                        <Nav.Link
+                            as={Link}
+                            to='/viewPets'
+                            style={{ color: '#08297c', fontWeight: '500' }}>
+                            View Pet
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to='/registerPet'
+                            style={{ color: '#08297c', fontWeight: '500' }}>
+                            Register Pet
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to='/viewAppointments'
+                            style={{ color: '#08297c', fontWeight: '500' }}>
+                            View Appointment
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to='/bookAppointment'
+                            style={{ color: '#08297c', fontWeight: '500' }}>
+                            Book Appointment
+                        </Nav.Link>
+                        <Nav.Link
+                            as={Link}
+                            to='/profile'
+                            style={{ paddingLeft: '515px' }}>
+                            <img
+                                id='profile-picture'
+                                src={
+                                    process.env.PUBLIC_URL +
+                                    '/images/user-profile.png'
+                                }
+                                height={40}
+                                width={50}
+                                alt='User'
+                            />
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
-
 export default NavBar;

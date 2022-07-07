@@ -1,0 +1,63 @@
+.label {
+    padding-right: 40px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.form {
+    background-color: #7ec6e8;
+    margin-bottom: 10px;
+}
+.appointment-form {
+    margin-left: -100px;
+}
+.form-label {
+    padding: 40px 40px 0px 40px;
+}
+
+.button {
+    margin: 50px;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.appointment-booking-heading-style {
+    color: #08297c;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    margin-left: -10px;
+}
+
+.label-style {
+    font-weight: 500;
+    color: #08297c;
+}
+
+.btn-style {
+    background-color: #08297c;
+    cursor: pointer;
+}
+
+.btn-style:focus {
+    background-color: #08297c;
+    border-style: outset;
+}
+
+.booking-form-breadcrumb {
+    margin-left: -250px;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}

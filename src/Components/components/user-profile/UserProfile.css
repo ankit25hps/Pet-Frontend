@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    align-items: center;
+    width: 70%;
+}
+.profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    margin-top: 2rem;
+    width: 20%;
+}
+
+.name {
+    margin-top: 2rem;
+    margin-left: -60px;
+    margin-right: 60px;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+}
+.email {
+    margin: 2rem;
+    margin-left: -40px;
+    margin-right: 80px;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+}
+
+#profile-picture {
+    margin-left: 0px;
+}
+
+.user-profile-breadcrumb {
+    margin-left: -250px;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}

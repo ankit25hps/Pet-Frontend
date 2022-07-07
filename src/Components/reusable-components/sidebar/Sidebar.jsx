@@ -1,33 +1,48 @@
-import React from "react";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './SideBar.css';
 
 function SideBar() {
+    const nav = useNavigate();
+
+    const logoutHandler = () => {
+        sessionStorage.removeItem('user');
+        nav('/');
+        window.location.reload();
+    };
+
     return (
-        <div className='side-bar'>
-            <ul className='nav flex-column vh-100'>
-                <li className='nav-item'>
-                    <a
-                        className='nav-link side-bar-color active  p-3'
-                        aria-current='page'
-                        href='#'>
-                        <b>About Us</b>
-                    </a>
-                </li>
-                <li className='nav-item'>
-                    <a className='nav-link side-bar-color  p-3' href='#'>
-                        <b>Contact Us</b>
-                    </a>
-                </li>
-                <li className='nav-item'>
-                    <a className='nav-link side-bar-color  p-3' href='#'>
-                        <b> Privacy Policy</b>
-                    </a>
-                </li>
-                <li className='nav-item'>
-                    <a className='nav-link side-bar-color  p-3' href='#'>
-                        <b>Logout</b>
-                    </a>
-                </li>
-            </ul>
+        <div className='s-layout'>
+            <div className='s-layout__sidebar'>
+                <nav className='s-sidebar__nav'>
+                    <ul>
+                        <li>
+                            <Link className='s-sidebar__nav-link' to='/aboutus'>
+                                <em>About Us</em>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className='s-sidebar__nav-link'
+                                to='/contactus'>
+                                <em>Contact Us</em>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className='s-sidebar__nav-link'
+                                to='/privacypolicy'>
+                                <em>Privacy Policy</em>
+                            </Link>
+                        </li>
+                        <li>
+                            <p className='logout' onClick={logoutHandler}>
+                                Logout
+                            </p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     );
 }

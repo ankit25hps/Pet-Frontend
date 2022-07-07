@@ -1,0 +1,54 @@
+.contact-us {
+    margin-left: -100px;
+    font-size: 18px;
+    width: 100%;
+    color: #08297c;
+}
+
+.contact-us-heading {
+    color: #08297c;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+.contact-us-heading-2 {
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+
+.contact-details {
+    font-size: 14px;
+}
+
+.contact-us-div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+
+#mail {
+    margin-left: 250px;
+}
+.mail {
+    margin-left: 200px;
+}
+.contact-us-div-child {
+    padding-right: 60px;
+}
+#phoneNumber,
+#facebook {
+    margin-left: 35px;
+}
+
+#twitter {
+    margin-left: 195px;
+}
+
+.twitter {
+    margin-left: 140px;
+}
+
+.facebook {
+    margin-left: -20px;
+}

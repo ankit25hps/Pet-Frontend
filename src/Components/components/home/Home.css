@@ -1,0 +1,27 @@
+.main {
+    padding-left: -80px;
+    object-fit: cover;
+    margin-left: -150px;
+}
+.d-block {
+    object-fit: cover;
+    border-color: black;
+    border: 2px solid #849dc8;
+}
+.home {
+    margin-left: -300px;
+    margin-top: 1rem;
+    margin-bottom: 50px;
+    padding-left: 50px;
+}
+.breadcrumb-item.active {
+    color: #7ec6e8;
+}
+
+.welcome-heading {
+    color: #08297c;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 90px;
+    padding-bottom: 30px;
+}

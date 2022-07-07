@@ -1,0 +1,31 @@
+.pet {
+    margin: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.btn-style {
+    background-color: #08297c;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.btn-style:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #08297c;
+    opacity: 0.8;
+}
+
+.button {
+    margin-right: 5px;
+    padding-left: 5px;
+}
+#actions {
+    padding-left: 150px;
+}
+
+.heading-style {
+    color: #08297c;
+}

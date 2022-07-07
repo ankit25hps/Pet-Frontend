@@ -1,0 +1,66 @@
+.bold {
+    font-weight: 600;
+}
+
+.form {
+    background-color: #7ec6e8;
+    margin-bottom: 100px;
+}
+
+.form-label {
+    padding: 40px 40px 0px 40px;
+}
+
+.label-style {
+    font-weight: 500;
+    color: #08297c;
+}
+
+.sign-up-heading-style {
+    color: #08297c;
+    font-weight: 600;
+}
+.button {
+    margin: 50px;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.link {
+    color: #08297c;
+    padding-bottom: 2rem;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #08297c;
+}
+
+.container {
+    width: 40rem;
+}
+
+.btn-style {
+    background-color: #08297c;
+    color: white;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.btn-style:hover {
+    background-color: #08297c;
+    color: white;
+    border-style: outset;
+}
+
+.login-button,
+.login-button:hover {
+    background: none;
+    color: #08297c;
+    border: none;
+    padding-left: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
