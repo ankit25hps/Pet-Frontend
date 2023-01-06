@@ -1,0 +1,38 @@
+.appointments-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -200px;
+    margin-right: 110px;
+    padding: 0;
+}
+
+.appointment-heading-style {
+    display: flex;
+    align-items: center;
+    margin-left: 110px;
+    margin-top: 1rem;
+    padding-bottom: 50px;
+    
+    width: 40rem;
+    color: #08297c;
+}
+
+.appointment-table-heading {
+    margin-left: -10px;
+    color: #08297c;
+    font-size: 18px;
+    padding: 10px 25px 30px 50px;
+}
+
+.appointments-loading-text,
+.no-appointment-data-text {
+    padding: 100px 0 0 180px;
+}
+
+.appointment-list-breadcrumb {
+    margin-left: -250px;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}

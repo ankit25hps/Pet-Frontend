@@ -1,0 +1,37 @@
+.pets-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -400px;
+    margin-right: -130px;
+    padding: 0;
+}
+
+.pet-heading-style {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    padding-left: 100px;
+    margin-top: 1rem;
+    padding-bottom: 50px;
+    width: 50rem;
+    color: #08297c;
+}
+
+.pet-table-heading {
+    color: #08297c;
+    font-size: 18px;
+    padding: 10px 25px 30px 50px;
+}
+
+.pets-loading-text,
+.no-pet-data-text {
+    padding: 100px 0 0 150px;
+}
+
+.view-pet-breadcrumb {
+    margin-left: -250px;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}

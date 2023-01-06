@@ -1,0 +1,109 @@
+create database PetClinic_db;
+
+show databases;
+
+use PetClinic_db;
+
+create table Account(
+UserId int NOT NULL AUTO_INCREMENT,
+UserName varchar(50) NOT NULL,
+UserEmail varchar(50) NOT NULL,
+UserPassword varchar(50) NOT NULL,
+RoleId int NOT NULL default 1,
+IsActive bit NOT NULL DEFAULT 1,
+constraint PK_Account primary key(UserId),
+constraint FK_Account FOREIGN KEY (RoleId)
+    REFERENCES Lkp_Role(RoleId)
+);
+select *from Account;
+create table Lkp_Role(
+RoleId int NOT NULL AUTO_INCREMENT,
+RoleName varchar(50) NOT NULL,
+IsActive bit NOT NULL DEFAULT 1,
+constraint PK_Lkp_Role primary key(RoleId) 
+);
+
+create table Lkp_TimeSlot(
+TimeSlotId int NOT NULL AUTO_INCREMENT,
+TimeSlots varchar(50) NOT NULL,
+IsActive bit NOT NULL DEFAULT 1,
+constraint PK_Lkp_TimeSlot primary key(TimeSlotId) 
+);
+
+create table Lkp_PetHairCoat( 
+PetHairCoatId int auto_increment NOT NULL,
+PetHairCoatType varchar(50) NOT NULL,
+IsActive bit NOT NULL DEFAULT 1,
+constraint PK_Lkp_PetHairCoat primary key(PetHairCoatId)
+);
+
+create table PetInfo(
+PetId int NOT NULL AUTO_INCREMENT,
+UserId int NOT NULL,
+PetName varchar(50) NOT NULL,
+PetAge double ,
+PetBreed varchar(50) NOT NULL,
+PetGender varchar(15) NOT NULL,
+PetHairCoatType varchar(20) NOT NULL,
+PetWeight double NOT NULL,
+PetColor varchar(20) NOT NULL,
+IsActive bit NOT NULL DEFAULT 1,
+constraint PK_PetInfo primary key(PetId),
+constraint FK_PetOwnerInfo FOREIGN KEY (UserId)
+    REFERENCES Account(UserId)
+);
+
+create table Appointments(
+AppointmentId int NOT NULL AUTO_INCREMENT,
+UserId int NOT NULL,
+PetName varchar(20) NOT NULL,
+DateOfAppointment date NOT NULL,
+TimeOfAppointment varchar(10) NOT NULL,
+UserPhoneNumber long NOT NULL,
+ReasonOfAppointment varchar(100) NOT NULL,
+PetAllergies varchar(100),
+PreviousMedicationStatus varchar(10) NOT NULL,
+ProcedureRequested varchar(100) NOT NULL,
+IsActive bit NOT NULL DEFAULT 1,
+constraint PK_AppointmentInfo primary key(AppointmentId),
+constraint FK_AppointmentInfo FOREIGN KEY (UserId)
+    REFERENCES Account(UserId)
+);
+select *from Appointments;
+insert into Lkp_TimeSlot(TimeSlots) values('9-10 AM'),
+('10-11 AM'),
+('11-12 PM'),
+('2-3 PM'),
+('3-4 PM'),
+('4-5 PM'),
+('5-6 PM');
+select * from Lkp_TimeSlot;
+
+insert into Lkp_Role(RoleName) values
+('User'),
+('Admin');
+select * from Lkp_Role;
+
+insert into Lkp_PetHairCoat values(1, 'long', 1),
+(2, 'medium', 1),
+(3, 'short', 1),
+(4, 'double-coat', 1),
+(5, 'curly-coat', 1),
+(6, 'wire-coat', 1),
+(7, 'silky-coat', 1),
+(8, 'hairless', 1);
+select * from Lkp_PetHairCoat;
+
+insert into Account values(1, 'Rajinder', 'rajinder@gmail.com', 'Kaur@123', 1, 1),
+(2, 'Admin', 'admin@gmail.com', 'Admin@123', 2, 1),
+(3, 'Bhuvan', 'bhuvan@gmail.com', 'Bhuvan@123', 1, 1);
+Select * from Account;
+
+insert into PetInfo values(1, 1, 'Peter', 10, 'Golden Retriever', 'Male', 'double-coat', 30, 'Golden', 1),
+(2, 3, 'Tommy', 5, 'Shih Tzu', 'Female', 'long', 7.2, 'White', 1),
+(3, 1, 'Sushi', 2, 'Pug', 'Female', 'double-coat', 6, 'Apricot', 1);
+Select * from PetInfo;
+
+insert into Appointments values(1, 1, 'Sushi', '2022-05-27', '9-10 AM', 9876543210, 'Itchy Skin', 'no', 'Yes', 'Check-up', 1),
+(2, 3, 'Tommy', '2022-05-28','10-11 AM', 7654321980, 'Ear Infection', 'no', 'No', 'Medication Required', 1);
+select * from Appointments;
