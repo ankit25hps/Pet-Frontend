@@ -39,7 +39,7 @@
 }
 .pet-form {
     width: 20vw;
-    margin-left: -100px;
+    margin-left: -10px;
 }
 
 .label-style {
@@ -58,6 +58,6 @@
 }
 
 .form-style {
-    width: 35vw;
-    margin-left: 100px;
+    width: 30vw;
+    margin-left: 1px;
 }

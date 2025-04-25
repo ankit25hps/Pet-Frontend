@@ -8,7 +8,7 @@ function NavBar() {
                 <Navbar.Brand as={Link} to='/'>
                     <img
                         id='logo'
-                        style={{ paddingLeft: '20px', marginRight: '10px' }}
+                        style={{ paddingLeft: '20px', marginRight: '150px' }}
                         src={
                             process.env.PUBLIC_URL +
                             '/images/logo/pawworldLogo.png'

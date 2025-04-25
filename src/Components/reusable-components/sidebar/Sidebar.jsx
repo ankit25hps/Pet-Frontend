@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './SideBar.css';
+import './Sidebar.css';
 
-function SideBar() {
+function Sidebar() {
     const nav = useNavigate();
 
     const logoutHandler = () => {
@@ -47,4 +47,4 @@ function SideBar() {
     );
 }
 
-export default SideBar;
+export default Sidebar;

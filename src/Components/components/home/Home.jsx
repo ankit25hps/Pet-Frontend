@@ -20,7 +20,7 @@ function Home() {
                         <img
                             className='d-block'
                             style={{
-                                width: 800,
+                                width: 1000,
                                 height: 400,
                                 boxShadow: 100,
                             }}
@@ -34,7 +34,7 @@ function Home() {
                         <img
                             className='d-block'
                             style={{
-                                width: 800,
+                                width: 1000,
                                 height: 400,
                                 boxShadow: 100,
                             }}
@@ -48,7 +48,7 @@ function Home() {
                         <img
                             className='d-block'
                             style={{
-                                width: 800,
+                                width: 1000,
                                 height: 400,
                                 boxShadow: 100,
                             }}
